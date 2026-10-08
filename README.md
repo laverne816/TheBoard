@@ -19,18 +19,6 @@ The Board is a responsive opportunities noticeboard for young South Africans. It
 
 Saved items, profile details, theme, and checklist progress are stored in the browser using `localStorage`. Contact forms demonstrate the submission flow locally; they do not send messages to a server.
 
-## Run locally
-
-The project is a static website. It has no build step and requires no npm packages. Serve the project directory over HTTP so the site can load its templates and opportunity data.
-
-With Python installed, run this from the project folder:
-
-```powershell
-py -m http.server 8000
-```
-
-Then open <http://localhost:8000>. If `py` is unavailable, use `python -m http.server 8000`.
-
 ## Project structure
 
 ```text
