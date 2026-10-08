@@ -1,0 +1,6 @@
+{
+  "name": "THE BOARD",
+  "description": "Your future, pinned. A verified youth opportunities portal for young South Africans: jobs, learnerships, internships, bursaries, courses, and career events.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

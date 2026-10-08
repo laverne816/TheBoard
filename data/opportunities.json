@@ -1,0 +1,741 @@
+[
+  {
+    "id": "opp-01",
+    "title": "Universal Banking Operations Learnership 2026/27",
+    "organisation": "Standard Bank South Africa",
+    "category": "Learnerships",
+    "location": "Johannesburg, Gauteng",
+    "province": "Gauteng",
+    "closingDate": "2026-10-15T23:59:59Z",
+    "experienceLevel": "Matriculant",
+    "stipendOrSalary": "R7,200/month stipend + Medical aid contribution",
+    "shortDescription": "12-month accredited NQF Level 5 Banking Sector learnership offering practical branch operations, digital banking servicing, and retail wealth onboarding.",
+    "fullDescription": "Join one of Africa's leading financial institutions for a 12-month structured learnership designed specifically for unemployed South African matriculants. You will rotate across front-line customer engagement, digital advisory, AML compliance basics, and ATM management systems, while completing a formal NQF Level 5 Certificate in Banking Services.",
+    "eligibilityRequirements": [
+      "South African citizen with a valid green barcoded ID or smart card",
+      "Aged between 18 and 28 years at the time of application",
+      "Currently unemployed and not registered for full-time study in 2026/2027",
+      "Passed Grade 12 with Pure Mathematics (Level 4/50%+) or Mathematical Literacy (Level 5/60%+)",
+      "Passed English Home Language or First Additional Language (Level 4/50%+)",
+      "Clear criminal and ITC record"
+    ],
+    "requiredQualifications": [
+      "National Senior Certificate (Matric / Grade 12) obtained in 2022-2025"
+    ],
+    "requiredDocuments": [
+      "Updated 2-page CV in PDF format",
+      "Certified copy of South African ID (not older than 3 months)",
+      "Certified copy of Matric certificate or Statement of Results",
+      "Proof of residential address in Gauteng (utility bill or affidavit)"
+    ],
+    "applicationSteps": [
+      {
+        "step": 1,
+        "title": "Register on Careers Portal",
+        "instruction": "Create an applicant profile on the official Standard Bank Early Careers portal."
+      },
+      {
+        "step": 2,
+        "title": "Complete Online Numerical Assessment",
+        "instruction": "Take the timed 25-minute basic arithmetic and verbal situational judgment test."
+      },
+      {
+        "step": 3,
+        "title": "Upload Verified Documentation",
+        "instruction": "Upload your certified ID, matric results, and clean PDF resume before the deadline."
+      },
+      {
+        "step": 4,
+        "title": "Virtual Speed Interview",
+        "instruction": "Shortlisted candidates receive an automated SMS invite for a short recorded video/voice assessment."
+      }
+    ],
+    "officialLink": "https://www.standardbank.co.za/southafrica/personal/about-us/careers",
+    "dateAdded": "2026-09-20",
+    "lastUpdated": "2026-10-04",
+    "isFeatured": true,
+    "featuredNote": "Closing in 7 days! High intake (120 spots nationwide).",
+    "contactEmail": "earlycareers@standardbank.co.za",
+    "isVerified": true
+  },
+  {
+    "id": "opp-02",
+    "title": "Junior Cloud & DevOps Associate Programme",
+    "organisation": "Capitec Bank Technology",
+    "category": "Internships",
+    "location": "Stellenbosch / Hybrid (WC)",
+    "province": "Western Cape",
+    "closingDate": "2026-10-22T17:00:00Z",
+    "experienceLevel": "Graduate",
+    "stipendOrSalary": "R18,500/month + Laptop & Tech stipend",
+    "shortDescription": "18-month paid tech graduate incubator working directly on AWS cloud native microservices, Kubernetes clusters, and banking APIs.",
+    "fullDescription": "Capitec's tech division is expanding its cloud infrastructure engineering team. As a Junior Cloud Associate, you will be paired with principal cloud architects to build high-availability microservices serving over 22 million digital banking clients. You will gain hands-on production experience with Terraform, Docker, AWS Lambda, CI/CD pipelines, and Prometheus monitoring.",
+    "eligibilityRequirements": [
+      "South African citizen or permanent resident under 30 years old",
+      "Completed a recognized tertiary qualification in Computer Science, Software Engineering, or Information Systems",
+      "Foundational coding ability in Python, TypeScript, Java, or Go",
+      "Familiarity with Git version control and Linux terminal basics",
+      "Willing to spend 2 days per week at Technopark, Stellenbosch campus"
+    ],
+    "requiredQualifications": [
+      "Diploma or BSc in Computer Science, IT, BCom Inf Systems, or equivalent completed in 2024–2026"
+    ],
+    "requiredDocuments": [
+      "Curriculum Vitae highlighting GitHub projects or academic code repos",
+      "Full academic transcripts to date",
+      "Certified South African ID copy",
+      "Graduation certificate or completion letter from university faculty"
+    ],
+    "applicationSteps": [
+      {
+        "step": 1,
+        "title": "Submit Technical Profile",
+        "instruction": "Submit your CV and public GitHub/GitLab portfolio link on the Capitec Careers hub."
+      },
+      {
+        "step": 2,
+        "title": "HackerRank Code Assessment",
+        "instruction": "Complete a 90-minute online challenge covering data structures and basic scripting."
+      },
+      {
+        "step": 3,
+        "title": "Engineering Peer Review",
+        "instruction": "A 45-minute live technical discussion and system thinking chat with a Senior Cloud Engineer."
+      }
+    ],
+    "officialLink": "https://www.capitecbank.co.za/about-us/careers/",
+    "dateAdded": "2026-09-28",
+    "lastUpdated": "2026-10-06",
+    "isFeatured": true,
+    "featuredNote": "Fast-track permanent placement upon successful 18-month review.",
+    "contactEmail": "techrecruitment@capitecbank.co.za",
+    "isVerified": true
+  },
+  {
+    "id": "opp-03",
+    "title": "Sasol Foundation Undergraduate STEM Bursary 2027",
+    "organisation": "Sasol Foundation",
+    "category": "Bursaries",
+    "location": "National / Public Universities",
+    "province": "National",
+    "closingDate": "2026-10-12T23:59:59Z",
+    "experienceLevel": "Matriculant",
+    "stipendOrSalary": "100% Tuition + Accommodation + Meals + R12,000 Book Allowance + Laptop",
+    "shortDescription": "Comprehensive full bursary for high-achieving matriculants studying Chemical, Mechanical, or Electrical Engineering, and Data Science.",
+    "fullDescription": "The Sasol Foundation Bursary Programme invests in talented South African youth from disadvantaged and rural backgrounds who demonstrate exceptional academic aptitude in Science, Technology, Engineering, and Mathematics (STEM). Recipients receive full academic fee coverage, university-approved accommodation, monthly meal stipends, vacation work opportunities at Sasol plants in Secunda and Sasolburg, and comprehensive psycho-social support.",
+    "eligibilityRequirements": [
+      "Must be a South African citizen by birth",
+      "Currently in Grade 12 or completed Matric within the last 2 years",
+      "Minimum 70% (Level 6) for Grade 11 and Grade 12 Mathematics (Pure Maths only)",
+      "Minimum 70% (Level 6) for Physical Science",
+      "Minimum 60% (Level 5) for English First Additional Language",
+      "Combined gross household income not exceeding R600,000 per annum"
+    ],
+    "requiredQualifications": [
+      "Intention to register for full-time undergraduate BEng/BSc Engineering, Computer Science, or Data Science at an accredited South African public university"
+    ],
+    "requiredDocuments": [
+      "Certified copy of applicant's ID",
+      "Latest Grade 12 Term 2 or Term 3 report card (or final Matric certificate)",
+      "Certified copies of parents'/guardians' IDs",
+      "Proof of household income (3 months payslips, SASSA letter, or sworn affidavit if unemployed)",
+      "Provisional university acceptance letter (if already received)"
+    ],
+    "applicationSteps": [
+      {
+        "step": 1,
+        "title": "Online Bursary Portal Registration",
+        "instruction": "Access the official Sasol Bursaries portal and complete all demographic sections."
+      },
+      {
+        "step": 2,
+        "title": "Attach Household Proofs",
+        "instruction": "Scan and upload verified salary slips, SASSA affidavits, and certified report cards."
+      },
+      {
+        "step": 3,
+        "title": "Shortlisting & Psychometric Testing",
+        "instruction": "Candidates meeting initial academic cut-offs will take virtual aptitude assessments in November."
+      }
+    ],
+    "officialLink": "https://www.sasolbursaries.com",
+    "dateAdded": "2026-09-01",
+    "lastUpdated": "2026-10-07",
+    "isFeatured": true,
+    "featuredNote": "CLOSING IN 4 DAYS! Urgent applications recommended.",
+    "contactEmail": "bursaries@sasol.com",
+    "isVerified": true
+  },
+  {
+    "id": "opp-04",
+    "title": "Digify Africa: Digital Strategy & Social Commerce Accelerator",
+    "organisation": "Digify Africa x Meta",
+    "category": "Courses",
+    "location": "Virtual / Nationwide Online",
+    "province": "National",
+    "closingDate": "2026-10-31T23:59:59Z",
+    "experienceLevel": "Entry Level / No Exp",
+    "stipendOrSalary": "100% Free / Fully Sponsored + Mobile Data Provided (30GB/month)",
+    "shortDescription": "10-week high-intensity vocational bootcamp covering Meta Ads Manager, TikTok content growth, Google Analytics 4, and paid media ROI.",
+    "fullDescription": "Digify PRO is an intensive, industry-driven digital marketing bootcamp designed to transition creative young South Africans into junior agency roles, social media management, and e-commerce growth positions. Participants work on live brand briefs from real enterprise clients, master paid campaign architecture, and receive CV coaching and direct interview matchmaking with leading South African digital agencies upon graduation.",
+    "eligibilityRequirements": [
+      "South African citizen or permanent resident aged 18 to 30",
+      "Available full-time Monday to Friday (09:00 - 16:30) for 10 consecutive weeks",
+      "Functional literacy in English and basic computer proficiency",
+      "No prior marketing experience required — creative curiosity and hunger to learn are prioritized",
+      "Access to a quiet workspace and smartphone or computer (data bursary provided)"
+    ],
+    "requiredQualifications": [
+      "Grade 12 certificate / Matric (or equivalent NQF Level 4 qualification)"
+    ],
+    "requiredDocuments": [
+      "Clear copy of South African ID",
+      "Matric statement of results",
+      "Short 1-minute video link or 200-word written motivation describing why digital marketing excites you"
+    ],
+    "applicationSteps": [
+      {
+        "step": 1,
+        "title": "Submit Quick Intake Form",
+        "instruction": "Fill out the 5-minute online questionnaire regarding your availability and location."
+      },
+      {
+        "step": 2,
+        "title": "Complete Creative Mini-Task",
+        "instruction": "Answer a short 3-question creative scenario on how you would market a local sneaker brand on TikTok."
+      },
+      {
+        "step": 3,
+        "title": "Cohort Induction Call",
+        "instruction": "Selected participants attend a 30-minute virtual onboarding session and receive SIM data packages."
+      }
+    ],
+    "officialLink": "https://digifyafrica.com/programmes/digify-pro/",
+    "dateAdded": "2026-10-01",
+    "lastUpdated": "2026-10-05",
+    "isFeatured": false,
+    "featuredNote": "Includes 30GB free monthly mobile data for all participants.",
+    "contactEmail": "info@digifyafrica.com",
+    "isVerified": true
+  },
+  {
+    "id": "opp-05",
+    "title": "Customer Experience Junior Specialist (Youth Accelerator)",
+    "organisation": "Harambee Youth Employment Accelerator",
+    "category": "Jobs",
+    "location": "Durban Central, KwaZulu-Natal",
+    "province": "KwaZulu-Natal",
+    "closingDate": "2026-10-18T18:00:00Z",
+    "experienceLevel": "Entry Level / No Exp",
+    "stipendOrSalary": "R8,500 – R10,200/month basic + Shift allowance & Transport home",
+    "shortDescription": "Permanent junior inbound service specialist role supporting global fintech clients. Free pre-employment work readiness training included.",
+    "fullDescription": "Harambee is partnering with a major multinational business services hub in Durban to connect energetic young South Africans with permanent roles in customer operations. You will receive 3 weeks of fully paid workplace simulation training focusing on English communications, empathy-based problem resolution, CRM software navigation, and financial services etiquette before starting your shift-based role.",
+    "eligibilityRequirements": [
+      "South African citizen aged 18 to 34",
+      "Must have passed Grade 12 (Matric)",
+      "Excellent conversational English fluency (verbal and written)",
+      "Comfortable with basic keyboard typing and PC navigation",
+      "Residing in Durban or surrounding eThekwini municipal areas",
+      "Willing to work rotational shifts (including some evening and weekend shifts)"
+    ],
+    "requiredQualifications": [
+      "Grade 12 (Matric) with at least 50% in English"
+    ],
+    "requiredDocuments": [
+      "CV in PDF format",
+      "Certified copy of ID",
+      "Matric certificate or statement of results",
+      "Proof of banking account (bank confirmation letter)"
+    ],
+    "applicationSteps": [
+      {
+        "step": 1,
+        "title": "Join SAYouth.mobi / Harambee",
+        "instruction": "Log into your free SA Youth account or register a profile with zero data cost."
+      },
+      {
+        "step": 2,
+        "title": "Voice Fluency Screening",
+        "instruction": "Complete a 5-minute automated phone interview to evaluate verbal clarity."
+      },
+      {
+        "step": 3,
+        "title": "Assessment Day at Durban Hub",
+        "instruction": "Attend a half-day interactive group simulation and typing exercise in Durban Central."
+      }
+    ],
+    "officialLink": "https://sayouth.mobi/",
+    "dateAdded": "2026-09-25",
+    "lastUpdated": "2026-10-06",
+    "isFeatured": true,
+    "featuredNote": "Zero data cost to apply via sayouth.mobi portal.",
+    "contactEmail": "info@harambee.co.za",
+    "isVerified": true
+  },
+  {
+    "id": "opp-06",
+    "title": "Gauteng Youth Tech & Career Expo 2026",
+    "organisation": "City of Johannesburg x Youth Chamber",
+    "category": "Career Events",
+    "location": "Sandton Convention Centre, Johannesburg",
+    "province": "Gauteng",
+    "closingDate": "2026-10-24T08:00:00Z",
+    "experienceLevel": "Entry Level / No Exp",
+    "stipendOrSalary": "Free Admission (Pre-registration mandatory) + Free Gautrain vouchers",
+    "shortDescription": "2-day national career festival featuring 80+ enterprise hiring booths, on-site CV review clinics, live tech coding demos, and instant interviews.",
+    "fullDescription": "The Gauteng Youth Tech & Career Expo is South Africa's premier physical convening for young job seekers, graduates, and aspiring founders. Meet talent recruiters from banking, telecom, renewable energy, and creative tech sectors. Bring your printed CVs and attend free masterclasses on building LinkedIn profiles, acing video interviews, and accessing government enterprise startup vouchers.",
+    "eligibilityRequirements": [
+      "Open to all South African youth aged 16 to 35",
+      "Free ticket must be reserved in advance via the ticketing portal (limited to 5,000 passes)",
+      "Photo ID or student card required at entrance registration"
+    ],
+    "requiredQualifications": [
+      "All educational backgrounds welcome — from school leavers to PhD graduates"
+    ],
+    "requiredDocuments": [
+      "Digital QR ticket on mobile or printed pass",
+      "South African ID or valid passport",
+      "Recommended: 5-10 printed copies of your CV for recruiter drop-boxes"
+    ],
+    "applicationSteps": [
+      {
+        "step": 1,
+        "title": "Reserve Digital Ticket",
+        "instruction": "Book your free day pass on the event portal using your email and mobile number."
+      },
+      {
+        "step": 2,
+        "title": "Select Masterclass Tracks",
+        "instruction": "Choose between Software Engineering, Green Economy, or Creative Freelancing tracks."
+      },
+      {
+        "step": 3,
+        "title": "Check In at Gate 4",
+        "instruction": "Arrive at 08:30 AM at Sandton Convention Centre for lanyard collection and badge printing."
+      }
+    ],
+    "officialLink": "https://joburg.org.za/work/Pages/Youth-Development.aspx",
+    "dateAdded": "2026-10-02",
+    "lastUpdated": "2026-10-07",
+    "isFeatured": true,
+    "featuredNote": "First 1,000 attendees receive a free professional headshot photo voucher.",
+    "contactEmail": "youthdesk@joburg.org.za",
+    "isVerified": true
+  },
+  {
+    "id": "opp-07",
+    "title": "Retail Management Trainee Programme",
+    "organisation": "The Shoprite Group",
+    "category": "Learnerships",
+    "location": "Cape Town, Western Cape",
+    "province": "Western Cape",
+    "closingDate": "2026-11-05T23:59:59Z",
+    "experienceLevel": "Intermediate",
+    "stipendOrSalary": "R12,500/month stipend + Employee discount + Uniform allowance",
+    "shortDescription": "Fast-track retail leadership qualification covering inventory logistics, fresh food merchandising, supply chain management, and store management.",
+    "fullDescription": "Africa's largest food retailer invites motivated diploma and degree holders to join its rigorous Retail Leadership Academy. Over 12 months, you will learn end-to-end supermarket economics, cold chain management, shrinkage reduction, staff leadership, and customer satisfaction metrics, preparing you to step into an Assistant Store Manager role across Shoprite or Checkers stores.",
+    "eligibilityRequirements": [
+      "South African citizen under 29 years old",
+      "Completed a 3-year Diploma or Degree in Retail Management, Business Management, Supply Chain, or Logistics",
+      "Willing to work retail operating hours (including weekends and public holidays on roster)",
+      "High resilience, physical stamina, and strong team leadership aptitude"
+    ],
+    "requiredQualifications": [
+      "National Diploma or Bachelor's Degree in Business, Retail, or Logistics"
+    ],
+    "requiredDocuments": [
+      "Comprehensive CV detailing any prior customer-facing or part-time work",
+      "Certified ID copy",
+      "Certified copy of tertiary qualification and academic record"
+    ],
+    "applicationSteps": [
+      {
+        "step": 1,
+        "title": "Online Profile Submission",
+        "instruction": "Apply via Shoprite Holdings Careers with your validated tertiary certificate."
+      },
+      {
+        "step": 2,
+        "title": "Situational Judgement Test",
+        "instruction": "Complete an online assessment testing customer conflict management and stock logic."
+      },
+      {
+        "step": 3,
+        "title": "Regional Panel Interview",
+        "instruction": "Interview with a Regional Human Resources Manager and Store Operations Director."
+      }
+    ],
+    "officialLink": "https://www.shopriteholdings.co.za/careers.html",
+    "dateAdded": "2026-09-18",
+    "lastUpdated": "2026-10-05",
+    "isFeatured": false,
+    "featuredNote": "Path to Store Manager role within 24 months for top performers.",
+    "contactEmail": "retailtalent@shoprite.co.za",
+    "isVerified": true
+  },
+  {
+    "id": "opp-08",
+    "title": "Allan Gray Orbis Foundation High-Impact Fellowship",
+    "organisation": "Allan Gray Orbis Foundation",
+    "category": "Bursaries",
+    "location": "National / Partner Universities",
+    "province": "National",
+    "closingDate": "2026-11-15T17:00:00Z",
+    "experienceLevel": "Matriculant",
+    "stipendOrSalary": "Full tuition + Residence + Living stipend + International venture incubation support",
+    "shortDescription": "Prestigious fellowship designed to cultivate entrepreneurial leaders. Covers full university costs and provides personal executive mentorship.",
+    "fullDescription": "The Allan Gray Fellowship is more than financial assistance; it is a holistic development ecosystem for exceptional young South Africans with high entrepreneurial potential and leadership conviction. Fellows attend national seminars, receive one-on-one executive coaching, seed funding access for student ventures, and join an influential alumni network of business leaders across the continent.",
+    "eligibilityRequirements": [
+      "South African citizen under the age of 21 in your first year of university",
+      "Minimum 60% in Pure Mathematics (Grade 11/12)",
+      "Minimum overall academic average of 70% in Grade 11 and Grade 12",
+      "Demonstrated entrepreneurial initiative (e.g., started a project, business, school club, or community initiative)",
+      "Intending to study towards Commerce, Science, Engineering, Law, or Humanities at partner universities (UCT, Wits, UP, Stellenbosch, UJ, Rhodes, UFS, UKZN)"
+    ],
+    "requiredQualifications": [
+      "Grade 12 Matriculant with Bachelor's Degree University Exemption pass"
+    ],
+    "requiredDocuments": [
+      "Certified copy of ID",
+      "Certified Grade 11 final and Grade 12 mid-year / preliminary results",
+      "Detailed portfolio or written evidence of leadership and entrepreneurial initiatives",
+      "Two letters of recommendation from teachers, community leaders, or mentors"
+    ],
+    "applicationSteps": [
+      {
+        "step": 1,
+        "title": "Fellowship Application Portal",
+        "instruction": "Fill out the extensive online fellowship essay questions and demographic form."
+      },
+      {
+        "step": 2,
+        "title": "Psychometric & Critical Thinking Test",
+        "instruction": "Sit for virtual problem solving and psychological aptitude tests."
+      },
+      {
+        "step": 3,
+        "title": "National Selection Camp",
+        "instruction": "2-day experiential camp in Johannesburg evaluating teamwork, ethics, and innovation."
+      }
+    ],
+    "officialLink": "https://www.allangrayorbis.org/fellowship-programme/",
+    "dateAdded": "2026-09-15",
+    "lastUpdated": "2026-10-02",
+    "isFeatured": false,
+    "featuredNote": "Lifetime entrepreneurial network access across sub-Saharan Africa.",
+    "contactEmail": "fellowship@allangrayorbis.org",
+    "isVerified": true
+  },
+  {
+    "id": "opp-09",
+    "title": "Electrical Engineering & Instrumentation Apprenticeship",
+    "organisation": "Eskom Academy of Learning",
+    "category": "Learnerships",
+    "location": "Witbank / Emalahleni, Mpumalanga",
+    "province": "Mpumalanga",
+    "closingDate": "2026-10-20T16:00:00Z",
+    "experienceLevel": "Entry Level / No Exp",
+    "stipendOrSalary": "R6,800/month artisan stipend + Safety PPE and Tool allowance",
+    "shortDescription": "3-year Section 26D Artisan Trade Apprenticeship leading to official Red Seal qualification as a certified Electrical Artisan.",
+    "fullDescription": "Prepare for a respected industrial trade career with South Africa's national power utility. Apprentices undergo institutional theoretical training at the Eskom Academy of Learning followed by intensive practical workshop rotations at power stations and substation transmission networks. At the conclusion of the 3-year term, candidates sit for their official Red Seal Trade Test.",
+    "eligibilityRequirements": [
+      "South African citizen with a valid South African ID",
+      "Technical Matric (N3 Certificate with Electrical Trade Theory, Mathematics, Engineering Science, and Industrial Electronics) OR NSC Grade 12 with Pure Maths (40%+) and Physical Science (40%+)",
+      "Medically fit for industrial power station environments (heights and confined spaces)",
+      "Willing to relocate to Mpumalanga for the duration of the programme"
+    ],
+    "requiredQualifications": [
+      "Technical Matric / N3 Certificate or Grade 12 with Mathematics and Science"
+    ],
+    "requiredDocuments": [
+      "Certified copy of South African ID",
+      "Certified copies of all technical certificates (N3/NSC)",
+      "Proof of residence in Mpumalanga or adjacent municipal district",
+      "Clean police clearance certificate or affidavit"
+    ],
+    "applicationSteps": [
+      {
+        "step": 1,
+        "title": "Submit via Eskom Vacancies Portal",
+        "instruction": "Search reference code ESK-TRD-2026 and attach all certified academic certificates."
+      },
+      {
+        "step": 2,
+        "title": "Hand Skills & Technical Test",
+        "instruction": "Attend a practical bench test evaluating hand-tool dexterity and safety protocol comprehension."
+      },
+      {
+        "step": 3,
+        "title": "Occupational Health Examination",
+        "instruction": "Complete lung function, audiogram, and vision physical assessments."
+      }
+    ],
+    "officialLink": "https://www.eskom.co.za/careers/",
+    "dateAdded": "2026-09-22",
+    "lastUpdated": "2026-10-03",
+    "isFeatured": false,
+    "featuredNote": "Official Red Seal artisan accreditation upon trade test completion.",
+    "contactEmail": "apprentices@eskom.co.za",
+    "isVerified": true
+  },
+  {
+    "id": "opp-10",
+    "title": "Junior Full-Stack Web Development Immersion",
+    "organisation": "AWS x YouthCode Africa",
+    "category": "Courses",
+    "location": "Durban & Virtual Hybrid",
+    "province": "KwaZulu-Natal",
+    "closingDate": "2026-11-01T23:59:59Z",
+    "experienceLevel": "Entry Level / No Exp",
+    "stipendOrSalary": "100% Free Tuition + AWS Certified Cloud Practitioner Exam Voucher Included",
+    "shortDescription": "16-week comprehensive software engineering bootcamp focusing on React, TypeScript, Node.js, and AWS serverless architectures.",
+    "fullDescription": "A collaborative community tech initiative providing unemployed youth with practical coding skills that directly align with South African enterprise hiring demands. Students build four portfolio web apps, practice algorithmic interview questions, learn agile teamwork via Scrum sprints, and earn their internationally recognized AWS Certified Cloud Practitioner credential.",
+    "eligibilityRequirements": [
+      "South African citizen or permanent resident aged 18 to 32",
+      "Must have a desktop computer or laptop capable of running VS Code and web browsers",
+      "Commitment of 25 hours per week (mix of live Zoom classes and self-paced projects)",
+      "No computer science degree needed, but high dedication and problem-solving grit are required"
+    ],
+    "requiredQualifications": [
+      "Grade 12 (Matric) with basic mathematical reasoning"
+    ],
+    "requiredDocuments": [
+      "Copy of South African ID",
+      "CV indicating any past technology courses, community projects, or self-learning"
+    ],
+    "applicationSteps": [
+      {
+        "step": 1,
+        "title": "Online Aptitude Challenge",
+        "instruction": "Complete a 30-minute logic puzzle assessing algorithmic thinking (no coding needed)."
+      },
+      {
+        "step": 2,
+        "title": "Introductory HTML/CSS Exercise",
+        "instruction": "Follow a 2-hour tutorial to build a simple personal bio web page."
+      },
+      {
+        "step": 3,
+        "title": "Admissions Interview",
+        "instruction": "A 15-minute video call discussing your career ambitions and schedule commitment."
+      }
+    ],
+    "officialLink": "https://youthcodeafrica.org/programmes/fullstack/",
+    "dateAdded": "2026-10-03",
+    "lastUpdated": "2026-10-07",
+    "isFeatured": false,
+    "featuredNote": "Free $100 AWS certification voucher for all course completers.",
+    "contactEmail": "admissions@youthcodeafrica.org",
+    "isVerified": true
+  },
+  {
+    "id": "opp-11",
+    "title": "Junior Content & Copywriting Specialist",
+    "organisation": "Takealot Group",
+    "category": "Jobs",
+    "location": "Cape Town (Foreshore), Western Cape",
+    "province": "Western Cape",
+    "closingDate": "2026-10-19T17:00:00Z",
+    "experienceLevel": "Graduate",
+    "stipendOrSalary": "R16,000 – R19,500/month + Staff takealot voucher allowance",
+    "shortDescription": "Create persuasive product descriptions, promotional campaign banners, and catalog taxonomies for South Africa's leading e-commerce store.",
+    "fullDescription": "Takealot is looking for a sharp, creative Junior Copywriter to join our high-volume digital merchandising department. You will write SEO-optimized product copy, craft punchy marketing emails, ensure brand tone consistency across tens of thousands of consumer items, and collaborate with category managers to drive conversion rates across daily deals and seasonal sales.",
+    "eligibilityRequirements": [
+      "Degree or Diploma in English, Journalism, Media Studies, Creative Writing, or Brand Communication",
+      "Flawless grammar, proofreading precision, and speed in high-output environments",
+      "Basic understanding of SEO keywords and digital consumer browsing behavior",
+      "Comfortable with spreadsheets (Excel/Google Sheets) and content management systems"
+    ],
+    "requiredQualifications": [
+      "Tertiary qualification in Humanities, Communication, or Marketing"
+    ],
+    "requiredDocuments": [
+      "Resume in PDF format",
+      "Writing portfolio containing 3–5 short samples (articles, social posts, or mock product descriptions)",
+      "Certified ID copy"
+    ],
+    "applicationSteps": [
+      {
+        "step": 1,
+        "title": "Submit Portfolio & Resume",
+        "instruction": "Apply via Takealot Careers portal with writing samples attached."
+      },
+      {
+        "step": 2,
+        "title": "Take-Home Copywriting Test",
+        "instruction": "Write three sample product listings and a push notification headline within 48 hours."
+      },
+      {
+        "step": 3,
+        "title": "Team Culture Chat",
+        "instruction": "Meet the Lead Content Editor and Creative Director for a 30-minute discussion."
+      }
+    ],
+    "officialLink": "https://www.takealot.com/about/careers",
+    "dateAdded": "2026-09-29",
+    "lastUpdated": "2026-10-06",
+    "isFeatured": false,
+    "featuredNote": "Hybrid work policy: 3 days office / 2 days work from home.",
+    "contactEmail": "careers@takealot.com",
+    "isVerified": true
+  },
+  {
+    "id": "opp-12",
+    "title": "NYDA Creative Enterprise Seed Grant & Pitch Day",
+    "organisation": "National Youth Development Agency (NYDA)",
+    "category": "Career Events",
+    "location": "Braamfontein, Johannesburg & Hybrid",
+    "province": "Gauteng",
+    "closingDate": "2026-10-30T17:00:00Z",
+    "experienceLevel": "Entry Level / No Exp",
+    "stipendOrSalary": "Grants between R10,000 and R100,000 (Non-repayable) + Mentorship",
+    "shortDescription": "Pitch your creative, culinary, digital, or artisan micro-business to access non-repayable grant equipment funding and 12-month mentorship.",
+    "fullDescription": "The NYDA Grant Programme provides young entrepreneurs with financial and non-financial support to establish or expand viable micro-enterprises. Unlike bank loans, approved grants do not have to be paid back. Successful applicants also receive business management training, marketing collateral assistance, and legal registration support via CIPC.",
+    "eligibilityRequirements": [
+      "South African citizen aged 18 to 35 years old",
+      "Business must be 100% youth-owned",
+      "Operating or ready to launch in South Africa",
+      "Willing to undergo mandatory 5-day NYDA Business Management Training prior to grant disbursement",
+      "Full disclosure of business financial records or basic operational concept"
+    ],
+    "requiredQualifications": [
+      "Open to all educational backgrounds"
+    ],
+    "requiredDocuments": [
+      "Certified ID copy of youth founder(s)",
+      "Proof of residence",
+      "Company registration documents (CIPC) if already registered (or plan to register)",
+      "3-page business plan or filled NYDA concept template",
+      "Quotations for equipment or materials to be purchased with grant funds"
+    ],
+    "applicationSteps": [
+      {
+        "step": 1,
+        "title": "Attend NYDA Branch or Apply Online",
+        "instruction": "Register your youth enterprise profile on the NYDA ERP portal."
+      },
+      {
+        "step": 2,
+        "title": "Business Feasibility Assessment",
+        "instruction": "Meet a Youth Development Officer to review your equipment quotations."
+      },
+      {
+        "step": 3,
+        "title": "5-Minute Panel Pitch",
+        "instruction": "Present your business vision to the local Grant Approval Committee."
+      }
+    ],
+    "officialLink": "https://www.nyda.gov.za/Products-Services/Grant-Programme",
+    "dateAdded": "2026-09-15",
+    "lastUpdated": "2026-10-04",
+    "isFeatured": false,
+    "featuredNote": "Non-repayable government funding — 100% free to apply.",
+    "contactEmail": "info@nyda.gov.za",
+    "isVerified": true
+  },
+  {
+    "id": "opp-13",
+    "title": "Actuarial Science & Health Analytics Graduate Internship",
+    "organisation": "Discovery Limited",
+    "category": "Internships",
+    "location": "Sandton, Johannesburg, Gauteng",
+    "province": "Gauteng",
+    "closingDate": "2026-10-28T23:59:59Z",
+    "experienceLevel": "Graduate",
+    "stipendOrSalary": "R22,000 – R26,000/month + Full ASSA exam study support & leave",
+    "shortDescription": "2-year premium actuarial training programme with full study leave, mentorship from qualified actuaries, and rotation across Vitality Health.",
+    "fullDescription": "Discovery’s graduate actuarial programme is widely considered one of the most prestigious in the Southern Hemisphere. Interns rotate across Vitality Shared-Value Insurance, Life Pricing, Health Underwriting, and Data Analytics, while receiving comprehensive financial and institutional backing for their Actuarial Society of South Africa (ASSA) board examinations.",
+    "eligibilityRequirements": [
+      "South African citizen or permanent resident",
+      "Final year student or recent graduate in Actuarial Science, Mathematical Statistics, or Financial Engineering",
+      "Minimum 65% cumulative university academic average across all years",
+      "Strong analytical mind and passion for behavioral health economics"
+    ],
+    "requiredQualifications": [
+      "BSc or Honours in Actuarial Science or Mathematical Statistics"
+    ],
+    "requiredDocuments": [
+      "Academic transcript with full course marks",
+      "CV in PDF format",
+      "Certified South African ID copy",
+      "Record of any ASSA exemptions already obtained"
+    ],
+    "applicationSteps": [
+      {
+        "step": 1,
+        "title": "Discovery Graduate Portal",
+        "instruction": "Create your candidate profile and upload verified academic transcripts."
+      },
+      {
+        "step": 2,
+        "title": "Quantitative Reasoning Exam",
+        "instruction": "Complete a 60-minute advanced numerical and modeling assessment."
+      },
+      {
+        "step": 3,
+        "title": "Case Study Presentation",
+        "instruction": "Present a dynamic vitality health pricing model scenario to senior actuaries."
+      }
+    ],
+    "officialLink": "https://www.discovery.co.za/corporate/careers",
+    "dateAdded": "2026-10-01",
+    "lastUpdated": "2026-10-05",
+    "isFeatured": false,
+    "featuredNote": "Comprehensive ASSA exam fees and paid study leave included.",
+    "contactEmail": "graduates@discovery.co.za",
+    "isVerified": true
+  },
+  {
+    "id": "opp-14",
+    "title": "Junior Renewable Energy Field Technician",
+    "organisation": "Scatec Solar & Wind Africa",
+    "category": "Jobs",
+    "location": "Upington / Northern Cape",
+    "province": "Northern Cape",
+    "closingDate": "2026-11-10T17:00:00Z",
+    "experienceLevel": "Entry Level / No Exp",
+    "stipendOrSalary": "R14,000 – R17,500/month + Site accommodation & medical coverage",
+    "shortDescription": "Hands-on junior technician position maintaining solar PV inverter stations and grid-connection infrastructure across utility-scale solar farms.",
+    "fullDescription": "Be part of South Africa’s clean energy transition. Scatec operates some of the largest solar and battery storage installations in Africa. As a Junior Field Technician, you will assist certified electrical engineers in preventative maintenance, thermal drone inspections, inverter diagnostics, and transmission line safety audits.",
+    "eligibilityRequirements": [
+      "South African citizen aged 18 to 32",
+      "National Diploma or N6 in Electrical Engineering (Light or Heavy Current) or Mechatronics",
+      "Valid South African driver's license (Code 08/B) is an advantage",
+      "Comfortable working outdoors in hot climate conditions",
+      "Priority given to youth residing in the ZF Mgcawu District / Northern Cape"
+    ],
+    "requiredQualifications": [
+      "N6 or National Diploma in Electrical Engineering / Mechatronics"
+    ],
+    "requiredDocuments": [
+      "Curriculum Vitae",
+      "Certified ID copy",
+      "Certified diploma/certificate or completion statement",
+      "Proof of residential address in Northern Cape"
+    ],
+    "applicationSteps": [
+      {
+        "step": 1,
+        "title": "Online Submission",
+        "instruction": "Apply via Scatec Africa recruitment portal."
+      },
+      {
+        "step": 2,
+        "title": "Technical Safety Quiz",
+        "instruction": "Complete basic electrical safety and schematics reading questionnaire."
+      },
+      {
+        "step": 3,
+        "title": "On-Site Interview in Upington",
+        "instruction": "Tour the solar facility and participate in an interview with the Plant Operations Manager."
+      }
+    ],
+    "officialLink": "https://scatec.com/careers/",
+    "dateAdded": "2026-09-27",
+    "lastUpdated": "2026-10-07",
+    "isFeatured": false,
+    "featuredNote": "Includes on-site staff accommodation in Upington.",
+    "contactEmail": "africa.talent@scatec.com",
+    "isVerified": true
+  }
+]
