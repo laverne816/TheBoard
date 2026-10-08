@@ -41,7 +41,7 @@ the-board/
 
 - HTML5
 - CSS3
-- Vanilla JavaScript
+- JavaScript
 - Browser `localStorage`
 
 Opportunity content is maintained in `data/opportunities.json`. Review each listing and its external application link before relying on it; always confirm current eligibility and deadlines with the organization offering it.
