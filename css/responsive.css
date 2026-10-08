@@ -1,0 +1,21 @@
+@media (max-width: 380px) {
+  header > div > div {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  header > div > div > div:last-child {
+    gap: 0.25rem;
+  }
+
+  header button[aria-label="Sign in"] span.truncate,
+  header button[aria-label^="View profile"] span.truncate {
+    display: none;
+  }
+
+  header button[aria-label*="pinned opportunities"] {
+    gap: 0.25rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+  }
+}
