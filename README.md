@@ -4,6 +4,10 @@
 
 The Board is a responsive opportunities noticeboard for young South Africans. It brings jobs, learnerships, internships, bursaries, courses, and career events together in one searchable place, with practical tools to help applicants decide what to explore next.
 
+## Live site
+
+Open [The Board on GitHub Pages](https://laverne816.github.io/TheBoard/).
+
 ## Preview
 
 ![The Board homepage](assets/images/the-board-homepage.png)
@@ -17,7 +21,26 @@ The Board is a responsive opportunities noticeboard for young South Africans. It
 - Use career resources for CVs, interviews, cover letters, documents, and scam awareness.
 - Switch to Night Board, use the contact forms, and navigate on mobile or desktop.
 
-Saved items, profile details, theme, and checklist progress are stored in the browser using `localStorage`. Contact forms demonstrate the submission flow locally; they do not send messages to a server.
+Saved items, profile details, theme, checklist progress, language preference, and application statuses are stored in the browser using `localStorage`. Contact forms demonstrate the submission flow locally; they do not send messages to a server.
+
+## Applicant support tools
+
+- **Pathway advisor:** recommends opportunities using a user's province, highest completed grade or qualification, and selected interests. Suggestions are based on listing data and are not an eligibility decision.
+- **Document readiness:** checks selected CV, ID, and results file types and basic file signatures in the browser. Files are not uploaded or retained. The CV checklist and certification-stamp prompt are self-checks; the site cannot verify document contents, authenticity, identity, or certification.
+- **Application tracker:** lets applicants manually record progress for each opportunity. Statuses are stored only in the current browser and do not sync or receive employer updates.
+- **Language support:** provides translated navigation and applicant-support tools in English, isiZulu, isiXhosa, Sesotho, and Afrikaans. Native-speaker review is recommended before production use.
+
+## Run locally
+
+The project is a static website. It has no build step and requires no npm packages. Serve the project directory over HTTP so the site can load its templates and opportunity data.
+
+With Python installed, run this from the project folder:
+
+```powershell
+py -m http.server 8000
+```
+
+Then open <http://localhost:8000>. If `py` is unavailable, use `python -m http.server 8000`.
 
 ## Project structure
 
@@ -41,7 +64,7 @@ the-board/
 
 - HTML5
 - CSS3
-- JavaScript
+- Vanilla JavaScript
 - Browser `localStorage`
 
 Opportunity content is maintained in `data/opportunities.json`. Review each listing and its external application link before relying on it; always confirm current eligibility and deadlines with the organization offering it.

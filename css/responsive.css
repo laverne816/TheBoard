@@ -19,3 +19,22 @@
     padding-left: 0.5rem;
   }
 }
+
+@media (max-width: 1199px) {
+  header > div > div > div:last-child > .board-language-picker {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  header [data-vanilla-mobile-menu] .board-language-picker {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer [data-footer-language] {
+    display: none;
+  }
+}

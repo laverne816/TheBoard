@@ -12,6 +12,151 @@
     'Career Events': ['#8338ec', '#ffffff']
   };
   const checklistStorageKey = 'theboard_checklists';
+  const applicationStorageKey = 'theboard_application_status';
+  const languageStorageKey = 'theboard_language';
+  const supportedLanguages = ['en', 'zu', 'xh', 'st', 'af'];
+  const uiTranslations = {
+    en: {
+      navHome: 'THE BOARD', navWall: 'THE WALL', navToolkit: 'THE TOOLKIT', navContact: 'PIN A NOTE',
+      language: 'Language', advisor: 'Find my pathway', documents: 'Document readiness', tracker: 'Application tracker',
+      trackerIntro: 'Your private, on-device application updates.', noTracked: 'No applications are being tracked yet. Open an opportunity and choose a status to begin.',
+      discover: 'Find opportunities that fit you', advisorIntro: 'Answer three quick questions for a shortlist to explore.',
+      location: 'Where are you based?', education: 'What is the highest grade or qualification you completed?',
+      interests: 'What are you interested in?', any: 'Anywhere / any field',
+      recommend: 'Show my matches', recommendations: 'Your opportunities to explore',
+      fitNotice: 'Suggestions are based on listing details, not an eligibility decision. Check each official listing before applying.',
+      noMatches: 'No close matches yet. Try “Any field” or broaden your location.',
+      open: 'Open opportunity', docTitle: 'Get your documents application-ready',
+      docIntro: 'Choose a file for a private format check. Files stay in this browser and are not uploaded or saved.',
+      cv: 'CV (PDF or DOCX)', idDoc: 'ID document (PDF, JPG or PNG)', results: 'School results / qualification (PDF, JPG or PNG)',
+      chooseFile: 'Choose file', stamp: 'I checked that a certification stamp is visible on this copy',
+      cvChecklist: 'CV readiness checklist', cvContact: 'My contact details are current',
+      cvEducation: 'My education or training is listed', cvExperience: 'My experience, projects or volunteering is included',
+      cvSkills: 'My relevant skills are easy to find', readiness: 'CV readiness', cvChooseFirst: 'Choose a supported CV file to calculate readiness.', privacy: 'Private, local-only check',
+      privacyNote: 'This is a format and self-readiness check only. It does not verify identity, authenticity, certification validity or document contents. We do not upload or retain your files.',
+      formatOk: 'Supported file format', formatBad: 'Unsupported or unrecognised file format. Choose PDF, DOCX, JPG or PNG as listed.',
+      sizeBad: 'File is larger than the 10 MB limit.', stampCheck: 'Please visually check the uploaded copy for a certification stamp; this site cannot detect one.',
+      statusTitle: 'Track your application', status: 'Application status',
+      statusHint: 'Status is private to this browser and must be updated by you.',
+      notStarted: 'Not started', preparing: 'Preparing', applied: 'Applied', interview: 'Interview', offered: 'Offer received', unsuccessful: 'Not selected', withdrawn: 'Withdrawn',
+      statusSaved: 'Application status saved on this device.',
+      allLocations: 'All areas', gradeOptions: ['Below Grade 10', 'Grade 10', 'Grade 11', 'Matric / Grade 12', 'TVET / N3–N6', 'Diploma / degree'],
+      interestsOptions: ['Technology', 'Business', 'Finance', 'Engineering', 'Creative work', 'Customer service'],
+      tagline: 'No files leave your device.'
+    },
+    zu: {
+      navHome: 'IKHAYA LEBHODI', navWall: 'AMATHUBA', navToolkit: 'AMATHULUZI', navContact: 'SITHUMELE UMYALEZO',
+      language: 'Ulimi', advisor: 'Thola indlela yami', documents: 'Ukulungela kwamadokhumenti', tracker: 'Ukulandelela izicelo',
+      trackerIntro: 'Izibuyekezo zakho eziyimfihlo zezicelo zikule divayisi.', noTracked: 'Azikho izicelo ezilandelwayo okwamanje. Vula ithuba bese ukhetha isimo ukuze uqale.',
+      discover: 'Thola amathuba akufanele', advisorIntro: 'Phendula imibuzo emithathu ukuze uthole amathuba ongawahlola.',
+      location: 'Uhlala kuphi?', education: 'Yiliphi ibanga eliphakeme noma iziqu oziqedile?',
+      interests: 'Yini oyithandayo?', any: 'Noma kuphi / noma yimuphi umsebenzi',
+      recommend: 'Bonisa okufanelana nami', recommendations: 'Amathuba ongawahlola',
+      fitNotice: 'Iziphakamiso zisuselwa emininingwaneni yesikhangiso, akusona isinqumo sokufaneleka. Hlola isikhangiso esisemthethweni ngaphambi kokufaka isicelo.',
+      noMatches: 'Akukho okufanelana kahle okwamanje. Khetha “Noma yimuphi umsebenzi” noma wandise indawo.',
+      open: 'Vula ithuba', docTitle: 'Lungiselela amadokhumenti akho okufaka isicelo',
+      docIntro: 'Khetha ifayela ukuze ulihlole ngasese. Amafayela ahlala kulesi siphequluli futhi awalayishwa noma agcinwe.',
+      cv: 'I-CV (PDF noma DOCX)', idDoc: 'Umazisi (PDF, JPG noma PNG)', results: 'Imiphumela yesikole / iziqu (PDF, JPG noma PNG)',
+      chooseFile: 'Khetha ifayela', stamp: 'Ngihlolile ukuthi uphawu lokuqinisekisa luyabonakala kule khophi',
+      cvChecklist: 'Uhlu lokuhlola i-CV', cvContact: 'Imininingwane yami yokuxhumana isesimweni',
+      cvEducation: 'Imfundo noma ukuqeqeshwa kwami kufakiwe', cvExperience: 'Umsebenzi, amaphrojekthi noma ukuzithandela kwami kufakiwe',
+      cvSkills: 'Amakhono ami afanele ayatholakala kalula', readiness: 'Ukulungela kwe-CV', cvChooseFirst: 'Khetha ifayela le-CV elisekelwayo ukuze ubale ukulungela.', privacy: 'Ukuhlola kwangasese kule divayisi kuphela',
+      privacyNote: 'Lokhu kuhlola ifomethi nokuzilungiselela kuphela. Akuqinisekisi ubuwena, ubuqiniso, ukuqinisekiswa noma okuqukethwe yidokhumenti. Amafayela awalayishwa futhi awagcinwa.',
+      formatOk: 'Ifomethi yefayela iyasekelwa', formatBad: 'Ifomethi yefayela ayisekelwa noma ayaziwa. Khetha i-PDF, DOCX, JPG noma PNG njengoba kubonisiwe.',
+      sizeBad: 'Ifayela lidlula umkhawulo ongu-10 MB.', stampCheck: 'Hlola ngokubona ukuthi le khophi inophawu lokuqinisekisa; le sayithi ayikwazi ukulubona.',
+      statusTitle: 'Landela isimo sesicelo sakho', status: 'Isimo sesicelo',
+      statusHint: 'Isimo sigcinwa kule divayisi futhi kufanele usibuyekeze wena.',
+      notStarted: 'Akuqalwanga', preparing: 'Ngiyazilungiselela', applied: 'Ngifakile isicelo', interview: 'Inhlolokhono', offered: 'Ngithole isithembiso', unsuccessful: 'Angikhethwanga', withdrawn: 'Ngihoxile',
+      statusSaved: 'Isimo sesicelo sigcinwe kule divayisi.',
+      allLocations: 'Zonke izindawo', gradeOptions: ['Ngaphansi kweBanga 10', 'IBanga 10', 'IBanga 11', 'Umatikuletsheni / iBanga 12', 'TVET / N3–N6', 'Idiploma / iziqu'],
+      interestsOptions: ['Ubuchwepheshe', 'Ibhizinisi', 'Ezezimali', 'Ubunjiniyela', 'Umsebenzi wokusungula', 'Ukunakekela amakhasimende'],
+      tagline: 'Amafayela awashiyi idivayisi yakho.'
+    },
+    xh: {
+      navHome: 'IBHODI', navWall: 'AMATHUBA', navToolkit: 'IZIXHOBO', navContact: 'THUMELA UMYALEZO',
+      language: 'Ulwimi', advisor: 'Fumana indlela yam', documents: 'Ukulungela kwamaxwebhu', tracker: 'Ukulandelela izicelo',
+      trackerIntro: 'Uhlaziyo lwezicelo zakho oluyimfihlo, olukwesi sixhobo.', noTracked: 'Akukho zicelo zilandelelwayo okwangoku. Vula ithuba ukhethe imeko ukuze uqalise.',
+      discover: 'Fumana amathuba akufaneleyo', advisorIntro: 'Phendula imibuzo emithathu ukuze ufumane amathuba onokuwajonga.',
+      location: 'Uhlala phi?', education: 'Leliphi ibanga okanye isiqinisekiso esiphezulu osigqibileyo?',
+      interests: 'Yintoni onomdla kuyo?', any: 'Naphi na / nawuphi na umsebenzi',
+      recommend: 'Bonisa amathuba am', recommendations: 'Amathuba onokuwajonga',
+      fitNotice: 'Iingcebiso zisekelwe kwiinkcukacha zesibhengezo, asisosigqibo sokufaneleka. Jonga isibhengezo esisemthethweni ngaphambi kokufaka isicelo.',
+      noMatches: 'Akukho okufaneleyo okubonakalayo okwangoku. Khetha “Nawuphi na umsebenzi” okanye wandise indawo.',
+      open: 'Vula ithuba', docTitle: 'Lungiselela amaxwebhu okufaka isicelo',
+      docIntro: 'Khetha ifayile ukuze ihlolwe ngasese. Iifayile zihlala kwesi sikhangeli; azilayishwa okanye zigcinwe.',
+      cv: 'I-CV (PDF okanye DOCX)', idDoc: 'Isazisi (PDF, JPG okanye PNG)', results: 'Iziphumo zesikolo / isiqinisekiso (PDF, JPG okanye PNG)',
+      chooseFile: 'Khetha ifayile', stamp: 'Ndijongile ukuba isitampu sokuqinisekisa siyabonakala kule kopi',
+      cvChecklist: 'Uluhlu lokujonga i-CV', cvContact: 'Iinkcukacha zam zoqhagamshelwano zihlaziyiwe',
+      cvEducation: 'Imfundo okanye uqeqesho lwam lubhaliwe', cvExperience: 'Amava, iiprojekthi okanye umsebenzi wokuzithandela ufakiwe',
+      cvSkills: 'Izakhono ezifanelekileyo zibonakala lula', readiness: 'Ukulungela kwe-CV', cvChooseFirst: 'Khetha ifayile ye-CV exhaswayo ukuze kubalwe ukulungela.', privacy: 'Uvavanyo lwasekuhlaleni noluyimfihlo',
+      privacyNote: 'Olu luvavanyo lwefomathi nokuzilungiselela kuphela. Aluqinisekisi ubuwena, ubunyani, ukuqinisekiswa okanye umxholo woxwebhu. Iifayile azilayishwa okanye zigcinwe.',
+      formatOk: 'Ifomathi yefayile iyaxhaswa', formatBad: 'Ifomathi yefayile ayixhaswa okanye ayaziwa. Khetha i-PDF, DOCX, JPG okanye i-PNG njengoko kubonisiwe.',
+      sizeBad: 'Ifayile ingaphezulu komda we-10 MB.', stampCheck: 'Jonga ngokwakho ukuba ikopi inaso na isitampu; le sayithi ayikwazi ukusibona.',
+      statusTitle: 'Landela inkqubela yesicelo', status: 'Imeko yesicelo',
+      statusHint: 'Imeko igcinwa kwesi sixhobo kwaye kufuneka uyihlaziye ngokwakho.',
+      notStarted: 'Ayiqalwanga', preparing: 'Ndiyalungiselela', applied: 'Ndifake isicelo', interview: 'Udliwano-ndlebe', offered: 'Ndifumene isipho', unsuccessful: 'Andikhethwanga', withdrawn: 'Ndiyarhoxa',
+      statusSaved: 'Imeko yesicelo igcinwe kwesi sixhobo.',
+      allLocations: 'Zonke iindawo', gradeOptions: ['Ngaphantsi kweBanga 10', 'IBanga 10', 'IBanga 11', 'Imatriki / iBanga 12', 'TVET / N3–N6', 'Idiploma / isidanga'],
+      interestsOptions: ['Itekhnoloji', 'Ishishini', 'Ezemali', 'Ubunjineli', 'Umsebenzi wobugcisa', 'Inkonzo yabathengi'],
+      tagline: 'Iifayile aziphumi kwisixhobo sakho.'
+    },
+    st: {
+      navHome: 'BOTOA', navWall: 'MENYETLA', navToolkit: 'DITHULUSI', navContact: 'ROMELA MOLAETSA',
+      language: 'Puo', advisor: 'Fumana tsela ya ka', documents: 'Tokisetso ya ditokomane', tracker: 'Tateliso ya dikopo',
+      trackerIntro: 'Dintjhafatso tsa dikopo tsa hao tsa poraefete, tse sesebedisweng sena.', noTracked: 'Ha ho dikopo tse latellwang hona jwale. Bula monyetla mme o kgethe boemo ho qala.',
+      discover: 'Fumana menyetla e o loketseng', advisorIntro: 'Araba dipotso tse tharo ho fumana lenane la menyetla eo o ka e hlahlobang.',
+      location: 'O dula hokae?', education: 'O qetile sehlopha kapa thuto efe e phahameng ka ho fetisisa?',
+      interests: 'O kgahlelwa ke eng?', any: 'Hohle / mosebetsi ofe kapa ofe',
+      recommend: 'Bontsha tse ntshwanetseng', recommendations: 'Menyetla eo o ka e hlahlobang',
+      fitNotice: 'Ditlhahiso di itshetlehile ka dintlha tsa papatso, ha se qeto ya hore o a tshwaneleha. Sheba papatso ya semmuso pele o etsa kopo.',
+      noMatches: 'Ha ho tse tshwanelang haufi hona jwale. Kgetha “Mosebetsi ofe kapa ofe” kapa atolosa sebaka.',
+      open: 'Bula monyetla', docTitle: 'Lokisetsa ditokomane tsa kopo',
+      docIntro: 'Kgetha faele bakeng sa tlhahlobo ya poraefete. Difaele di sala ho sebatli sena, ha di romelwe kapa ho bolokwa.',
+      cv: 'CV (PDF kapa DOCX)', idDoc: 'ID (PDF, JPG kapa PNG)', results: 'Dintlha tsa sekolo / thuto (PDF, JPG kapa PNG)',
+      chooseFile: 'Kgetha faele', stamp: 'Ke hlahlobile hore setempe sa netefatso se bonahala koping ena',
+      cvChecklist: 'Lenane la tlhahlobo ya CV', cvContact: 'Dintlha tsa ka tsa puisano di nakong',
+      cvEducation: 'Thuto kapa kwetliso ya ka e ngotswe', cvExperience: 'Boiphihlelo, diprojeke kapa boithaopo di kenyeleditswe',
+      cvSkills: 'Bokgoni bo loketseng bo bonahala habonolo', readiness: 'Tokisetso ya CV', cvChooseFirst: 'Kgetha faele ya CV e tsheheditsweng ho bala boitokisetso.', privacy: 'Tlhahlobo ya poraefete sesebedisweng sena feela',
+      privacyNote: 'Ena ke tlhahlobo ya fomate le boitokisetso feela. Ha e netefatse boitsebiso, bonnete, setifikeiti kapa dikahare tsa tokomane. Difaele ha di romelwe kapa ho bolokwa.',
+      formatOk: 'Fomate ya faele e a tshehetswa', formatBad: 'Fomate ya faele ha e tshehetswe kapa ha e tsejwe. Kgetha PDF, DOCX, JPG kapa PNG jwalo ka ha ho bontshitswe.',
+      sizeBad: 'Faele e feta moedi wa 10 MB.', stampCheck: 'Ka kopo sheba ka mahlo hore koping ho na le setempe; sebaka sena ha se kgone ho se bona.',
+      statusTitle: 'Latela tswelopele ya kopo', status: 'Boemo ba kopo',
+      statusHint: 'Boemo bo bolokwa sesebedisweng sena mme o lokela ho bo ntjhafatsa ka bowena.',
+      notStarted: 'Ha e so qalwe', preparing: 'Ke a itokisa', applied: 'Ke kentse kopo', interview: 'Puisano', offered: 'Ke fumane tlhahiso', unsuccessful: 'Ha ke a kgethwa', withdrawn: 'Ke ikhula',
+      statusSaved: 'Boemo ba kopo bo bolokilwe sesebedisweng sena.',
+      allLocations: 'Libaka tsohle', gradeOptions: ['Ka tlase ho Kereiti ya 10', 'Kereiti ya 10', 'Kereiti ya 11', 'Matriki / Kereiti ya 12', 'TVET / N3–N6', 'Diploma / degree'],
+      interestsOptions: ['Theknoloji', 'Kgwebo', 'Ditjhelete', 'Boenjiniere', 'Mosebetsi wa boqapi', 'Tshebeletso ya bareki'],
+      tagline: 'Difaele ha di tlohe sesebedisweng sa hao.'
+    },
+    af: {
+      navHome: 'DIE BORD', navWall: 'GELEENTHEDE', navToolkit: 'HULPMIDDELS', navContact: 'STUUR ’N BOODSKAP',
+      language: 'Taal', advisor: 'Vind my rigting', documents: 'Dokumentgereedheid', tracker: 'Aansoekopspoorder',
+      trackerIntro: 'Jou private aansoekopdaterings op hierdie toestel.', noTracked: 'Geen aansoeke word nog opgespoor nie. Maak ’n geleentheid oop en kies ’n status om te begin.',
+      discover: 'Vind geleenthede wat by jou pas', advisorIntro: 'Beantwoord drie kort vrae vir ’n lys geleenthede om te verken.',
+      location: 'Waar woon jy?', education: 'Wat is die hoogste graad of kwalifikasie wat jy voltooi het?',
+      interests: 'Waarin stel jy belang?', any: 'Enige plek / enige veld',
+      recommend: 'Wys my pasmaats', recommendations: 'Geleenthede om te verken',
+      fitNotice: 'Voorstelle is op die advertensie se besonderhede gegrond, nie ’n geskiktheidsbesluit nie. Gaan elke amptelike advertensie na voordat jy aansoek doen.',
+      noMatches: 'Geen goeie pasmaats nog nie. Kies “Enige veld” of brei jou ligging uit.',
+      open: 'Maak geleentheid oop', docTitle: 'Maak jou dokumente gereed vir aansoek',
+      docIntro: 'Kies ’n lêer vir ’n private formaatkontrole. Lêers bly in hierdie blaaier en word nie opgelaai of gestoor nie.',
+      cv: 'CV (PDF of DOCX)', idDoc: 'ID-dokument (PDF, JPG of PNG)', results: 'Skooluitslae / kwalifikasie (PDF, JPG of PNG)',
+      chooseFile: 'Kies lêer', stamp: 'Ek het nagegaan dat ’n sertifiseringstempel op hierdie kopie sigbaar is',
+      cvChecklist: 'CV-gereedheidslys', cvContact: 'My kontakbesonderhede is op datum',
+      cvEducation: 'My opleiding of opleidingservaring is ingesluit', cvExperience: 'My ervaring, projekte of vrywilligerswerk is ingesluit',
+      cvSkills: 'My toepaslike vaardighede is maklik om te vind', readiness: 'CV-gereedheid', cvChooseFirst: 'Kies ’n ondersteunde CV-lêer om gereedheid te bereken.', privacy: 'Privaat kontrole op hierdie toestel',
+      privacyNote: 'Dit is slegs ’n formaat- en selfgereedheidskontrole. Dit bevestig nie identiteit, egtheid, sertifisering of dokumentinhoud nie. Ons laai nie jou lêers op of behou dit nie.',
+      formatOk: 'Lêerformaat word ondersteun', formatBad: 'Lêerformaat word nie ondersteun of herken nie. Kies PDF, DOCX, JPG of PNG soos aangedui.',
+      sizeBad: 'Lêer is groter as die limiet van 10 MB.', stampCheck: 'Kontroleer asseblief self of ’n sertifiseringstempel sigbaar is; hierdie webwerf kan dit nie opspoor nie.',
+      statusTitle: 'Volg jou aansoek', status: 'Aansoekstatus',
+      statusHint: 'Status is privaat op hierdie blaaier en moet deur jou opgedateer word.',
+      notStarted: 'Nie begin nie', preparing: 'Berei voor', applied: 'Aansoek gedoen', interview: 'Onderhoud', offered: 'Aanbod ontvang', unsuccessful: 'Nie gekies nie', withdrawn: 'Teruggetrek',
+      statusSaved: 'Aansoekstatus is op hierdie toestel gestoor.',
+      allLocations: 'Alle gebiede', gradeOptions: ['Onder Graad 10', 'Graad 10', 'Graad 11', 'Matriek / Graad 12', 'TVET / N3–N6', 'Diploma / graad'],
+      interestsOptions: ['Tegnologie', 'Besigheid', 'Finansies', 'Ingenieurswese', 'Kreatiewe werk', 'Kliëntediens'],
+      tagline: 'Lêers verlaat nie jou toestel nie.'
+    }
+  };
   let opportunities = [];
   let pageName = 'home';
   let selectedId = '';
@@ -43,6 +188,251 @@
     '"': '&quot;',
     "'": '&#39;'
   })[char]);
+
+  const getLanguage = () => {
+    try {
+      const saved = localStorage.getItem(languageStorageKey);
+      return supportedLanguages.includes(saved) ? saved : 'en';
+    } catch (error) {
+      console.warn('Could not read the saved language preference.', error);
+      return 'en';
+    }
+  };
+
+  const t = (key) => uiTranslations[getLanguage()][key] ?? uiTranslations.en[key] ?? key;
+
+  const languagePickerMarkup = () => `<label class="board-language-picker flex items-center gap-2 text-xs font-bold text-[#111111] dark:text-white"><span>${escapeHtml(t('language'))}</span><select data-language-select class="px-2 py-1.5 bg-white dark:bg-[#25262c] border-2 border-[#111111] dark:border-white text-[#111111] dark:text-white" aria-label="${escapeHtml(t('language'))}"><option value="en">English</option><option value="zu">isiZulu</option><option value="xh">isiXhosa</option><option value="st">Sesotho</option><option value="af">Afrikaans</option></select></label>`;
+
+  const advisorMarkup = () => {
+    const language = getLanguage();
+    const gradeKeys = ['below10', 'grade10', 'grade11', 'matric', 'tvet', 'tertiary'];
+    const gradeOptions = uiTranslations[language].gradeOptions.map((label, index) =>
+      `<option value="${gradeKeys[index]}">${escapeHtml(label)}</option>`).join('');
+    const interests = ['Technology', 'Business', 'Finance', 'Engineering', 'Creative work', 'Customer service'];
+    const interestLabels = uiTranslations[language].interestsOptions;
+    const interestOptions = interests.map((value, index) =>
+      `<label class="flex items-center gap-2 p-2 border border-stone-300 dark:border-stone-700 bg-white dark:bg-[#1a1b1f]"><input type="checkbox" name="advisor-interest" value="${value.toLowerCase()}" class="accent-[#ff5c1a]"><span>${escapeHtml(interestLabels[index])}</span></label>`).join('');
+    const provinces = ['Gauteng', 'Western Cape', 'KwaZulu-Natal', 'Mpumalanga', 'Northern Cape', 'Eastern Cape', 'Free State', 'Limpopo', 'North West'];
+    return `<div class="min-h-screen bg-[#faf7f2] dark:bg-[#121316] py-8 sm:py-12"><main class="max-w-4xl mx-auto px-4 sm:px-6"><div class="mb-6">${languagePickerMarkup()}</div><section class="p-5 sm:p-8 bg-white dark:bg-[#1a1b1f] border-2 border-[#111111] dark:border-white shadow-[6px_6px_0_#111] dark:shadow-[6px_6px_0_#555]"><p class="text-xs font-mono font-bold uppercase text-[#ff5c1a]">${escapeHtml(t('advisor'))}</p><h1 class="mt-2 text-3xl sm:text-4xl font-black text-[#111111] dark:text-white">${escapeHtml(t('discover'))}</h1><p class="mt-2 text-sm text-stone-600 dark:text-stone-300">${escapeHtml(t('advisorIntro'))}</p><form id="career-advisor-form" class="mt-6 grid gap-5"><div><label for="advisor-location" class="block mb-1 font-bold">${escapeHtml(t('location'))}</label><select id="advisor-location" class="w-full p-3 border-2 border-[#111111] dark:border-white bg-white dark:bg-[#25262c] text-[#111111] dark:text-white"><option value="all">${escapeHtml(t('allLocations'))}</option>${provinces.map((province) => `<option value="${escapeHtml(province)}">${escapeHtml(province)}</option>`).join('')}</select></div><div><label for="advisor-education" class="block mb-1 font-bold">${escapeHtml(t('education'))}</label><select id="advisor-education" required class="w-full p-3 border-2 border-[#111111] dark:border-white bg-white dark:bg-[#25262c] text-[#111111] dark:text-white"><option value="">—</option>${gradeOptions}</select></div><fieldset><legend class="mb-2 font-bold">${escapeHtml(t('interests'))}</legend><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">${interestOptions}</div></fieldset><button type="submit" class="px-5 py-3 bg-[#ff5c1a] text-white border-2 border-[#111111] font-bold">${escapeHtml(t('recommend'))}</button></form><div id="advisor-results" class="mt-6" aria-live="polite"></div></section></main></div>`;
+  };
+
+  const documentsMarkup = () => `<div class="min-h-screen bg-[#faf7f2] dark:bg-[#121316] py-8 sm:py-12"><main class="max-w-4xl mx-auto px-4 sm:px-6"><div class="mb-6">${languagePickerMarkup()}</div><section class="p-5 sm:p-8 bg-white dark:bg-[#1a1b1f] border-2 border-[#111111] dark:border-white shadow-[6px_6px_0_#111] dark:shadow-[6px_6px_0_#555]"><p class="text-xs font-mono font-bold uppercase text-[#ff5c1a]">${escapeHtml(t('privacy'))}</p><h1 class="mt-2 text-3xl sm:text-4xl font-black text-[#111111] dark:text-white">${escapeHtml(t('docTitle'))}</h1><p class="mt-2 text-sm text-stone-600 dark:text-stone-300">${escapeHtml(t('docIntro'))}</p><div class="mt-5 p-3 border border-stone-300 dark:border-stone-700 text-sm" role="note">${escapeHtml(t('privacyNote'))}</div><div class="mt-6 grid gap-4">${[['document-cv','cv','pdf,.docx'],['document-id','idDoc','pdf,.jpg,.jpeg,.png'],['document-results','results','pdf,.jpg,.jpeg,.png']].map(([id,key,accept]) => `<div class="p-4 border-2 border-stone-300 dark:border-stone-700"><label for="${id}" class="block font-bold">${escapeHtml(t(key))}</label><input id="${id}" type="file" accept=".${accept.replaceAll(',', ',.')}" class="mt-2 block w-full text-sm" aria-describedby="${id}-feedback"><p id="${id}-feedback" class="mt-2 text-sm text-stone-600 dark:text-stone-300" aria-live="polite">${escapeHtml(t('chooseFile'))}</p>${key !== 'cv' ? `<label class="mt-3 flex gap-2 items-start text-sm"><input type="checkbox" id="${id}-stamp" class="mt-1 accent-[#ff5c1a]"><span>${escapeHtml(t('stamp'))}</span></label>` : ''}</div>`).join('')}</div><div class="mt-6 p-4 border-2 border-[#111111] dark:border-white"><h2 class="font-bold text-lg">${escapeHtml(t('cvChecklist'))}</h2><div class="mt-3 grid gap-2">${[['cv-contact','cvContact'],['cv-education','cvEducation'],['cv-experience','cvExperience'],['cv-skills','cvSkills']].map(([id,key]) => `<label class="flex items-start gap-2 text-sm"><input id="${id}" type="checkbox" class="mt-1 accent-[#ff5c1a]"><span>${escapeHtml(t(key))}</span></label>`).join('')}</div><p class="mt-4 font-bold">${escapeHtml(t('readiness'))}: <span id="cv-readiness-value">0%</span></p><div class="mt-2 h-3 bg-stone-200 dark:bg-stone-700"><div id="cv-readiness-meter" class="h-3 bg-[#ff5c1a] transition-all" style="width:0%"></div></div></div></section></main></div>`;
+
+  const trackerMarkup = () => {
+    const saved = readStorage(applicationStorageKey, {});
+    const statuses = ['notStarted', 'preparing', 'applied', 'interview', 'offered', 'unsuccessful', 'withdrawn'];
+    const tracked = opportunities.filter((item) => {
+      const value = saved[item.id];
+      return (typeof value === 'string' ? value : value?.status) && (typeof value === 'string' ? value : value.status) !== 'notStarted';
+    });
+    return `<div class="min-h-screen bg-[#faf7f2] dark:bg-[#121316] py-8 sm:py-12"><main class="max-w-4xl mx-auto px-4 sm:px-6"><div class="mb-6">${languagePickerMarkup()}</div><section class="p-5 sm:p-8 bg-white dark:bg-[#1a1b1f] border-2 border-[#111111] dark:border-white shadow-[6px_6px_0_#111] dark:shadow-[6px_6px_0_#555]"><p class="text-xs font-mono font-bold uppercase text-[#ff5c1a]">${escapeHtml(t('statusTitle'))}</p><h1 class="mt-2 text-3xl sm:text-4xl font-black text-[#111111] dark:text-white">${escapeHtml(t('tracker'))}</h1><p class="mt-2 text-sm text-stone-600 dark:text-stone-300">${escapeHtml(t('trackerIntro'))}</p>${tracked.length ? `<div class="mt-6 grid gap-4">${tracked.map((item) => { const stored = saved[item.id]; const current = typeof stored === 'string' ? stored : stored.status; return `<article data-tracked-item class="p-4 border-2 border-stone-300 dark:border-stone-700"><p class="text-xs font-bold uppercase text-[#ff5c1a]">${escapeHtml(item.category)} · ${escapeHtml(item.province)}</p><h2 class="mt-1 text-lg font-bold">${escapeHtml(item.title)}</h2><label for="application-status-${escapeHtml(item.id)}" class="mt-3 block text-sm font-bold">${escapeHtml(t('status'))}</label><select id="application-status-${escapeHtml(item.id)}" data-opportunity-status data-opportunity-id="${escapeHtml(item.id)}" class="mt-1 w-full sm:max-w-md p-2 border-2 border-[#111111] dark:border-white bg-[#faf7f2] dark:bg-[#25262c] text-[#111111] dark:text-white">${statuses.map((status) => `<option value="${status}" ${current === status ? 'selected' : ''}>${escapeHtml(t(status))}</option>`).join('')}</select><p data-status-confirmation class="mt-2 min-h-5 text-sm font-bold text-emerald-700 dark:text-emerald-300" aria-live="polite"></p><button type="button" data-route="detail" data-opportunity-id="${escapeHtml(item.id)}" class="mt-2 px-3 py-2 border-2 border-[#111111] dark:border-white font-bold text-sm">${escapeHtml(t('open'))}</button></article>`; }).join('')}</div>` : `<p class="mt-5 p-4 bg-stone-100 dark:bg-[#25262c]" role="status">${escapeHtml(t('noTracked'))}</p><button type="button" data-route="opportunities" class="mt-4 px-4 py-2 bg-[#ff5c1a] text-white border-2 border-[#111111] font-bold">${escapeHtml(t('navWall'))}</button>`}</section></main></div>`;
+  };
+
+  const renderLanguagePreference = () => {
+    const language = getLanguage();
+    root.querySelectorAll('[data-language-select]').forEach((select) => { select.value = language; });
+  };
+
+  const ensureFeatureNavigation = () => {
+    if (!['advisor', 'documents', 'tracker'].includes(pageName) || root.querySelector('[data-feature-navigation]')) return;
+    const main = root.querySelector('main');
+    if (!main) return;
+    const nav = document.createElement('div');
+    nav.dataset.featureNavigation = 'true';
+    nav.className = 'max-w-4xl mx-auto px-4 sm:px-6 pt-4 flex flex-wrap items-center justify-between gap-3';
+    nav.innerHTML = `<div class="flex flex-wrap gap-2"><button type="button" data-route="home" class="px-3 py-2 border-2 border-[#111111] dark:border-white bg-white dark:bg-[#1a1b1f] font-bold text-xs">${escapeHtml(t('navHome'))}</button><button type="button" data-route="opportunities" class="px-3 py-2 border-2 border-[#111111] dark:border-white bg-white dark:bg-[#1a1b1f] font-bold text-xs">${escapeHtml(t('navWall'))}</button></div>`;
+    main.before(nav);
+  };
+
+  const localizeNavigation = () => {
+    const nav = root.querySelector('header nav');
+    const navLabels = [
+      ['home', 'navHome'], ['opportunities', 'navWall'],
+      ['resources', 'navToolkit'], ['contact', 'navContact']
+    ];
+    navLabels.forEach(([route, key], index) => {
+      const button = nav?.querySelectorAll('button')[index];
+      if (!button) return;
+      button.dataset.route = route;
+      button.textContent = t(key);
+    });
+    const mobileMenu = root.querySelector('[data-vanilla-mobile-menu]');
+    if (mobileMenu) {
+      const buttons = [...mobileMenu.querySelectorAll('button')];
+      const oldLabels = ['THE BOARD', 'THE WALL', 'THE TOOLKIT', 'PIN A NOTE'];
+      buttons.forEach((button) => {
+        const original = button.dataset.originalRouteLabel || button.textContent.trim();
+        if (oldLabels.includes(original)) button.dataset.originalRouteLabel = original;
+        const route = original === 'THE BOARD' ? 'home' : original === 'THE WALL' ? 'opportunities' :
+          original === 'THE TOOLKIT' ? 'resources' : original === 'PIN A NOTE' ? 'contact' : '';
+        if (!route) return;
+        button.dataset.route = route;
+        button.textContent = t(route === 'home' ? 'navHome' : route === 'opportunities' ? 'navWall' :
+          route === 'resources' ? 'navToolkit' : 'navContact');
+      });
+    }
+  };
+
+  const ensureLanguageControl = () => {
+    const actions = root.querySelector('header > div > div > div:last-child');
+    if (actions && !actions.querySelector('[data-language-select]')) {
+      const wrapper = document.createElement('div');
+      wrapper.innerHTML = languagePickerMarkup();
+      actions.append(wrapper.firstElementChild);
+    }
+    const footer = root.querySelector('footer');
+    if (footer && !footer.querySelector('[data-language-select]')) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'px-4 py-3 border-t border-stone-300 dark:border-stone-700 flex justify-end';
+      wrapper.dataset.footerLanguage = 'true';
+      wrapper.innerHTML = languagePickerMarkup();
+      footer.prepend(wrapper);
+    }
+    renderLanguagePreference();
+  };
+
+  const enhanceHomePage = () => {
+    const search = root.querySelector('input[aria-label="Search opportunities by keyword"]');
+    const form = search?.closest('form');
+    if (!form || root.querySelector('[data-career-tools-links]')) return;
+    const links = document.createElement('div');
+    links.dataset.careerToolsLinks = 'true';
+    links.className = 'mt-3 flex flex-wrap gap-2';
+    links.innerHTML = `<button type="button" data-route="advisor" class="px-3 py-2 bg-white dark:bg-[#1a1b1f] border-2 border-[#111111] dark:border-white font-bold text-xs">${escapeHtml(t('advisor'))}</button><button type="button" data-route="documents" class="px-3 py-2 bg-white dark:bg-[#1a1b1f] border-2 border-[#111111] dark:border-white font-bold text-xs">${escapeHtml(t('documents'))}</button><button type="button" data-route="tracker" class="px-3 py-2 bg-white dark:bg-[#1a1b1f] border-2 border-[#111111] dark:border-white font-bold text-xs">${escapeHtml(t('tracker'))}</button>`;
+    form.after(links);
+  };
+
+  const enhanceProfilePage = () => {
+    if (pageName !== 'auth' || !getUser() || root.querySelector('[data-profile-tool-links]')) return;
+    const heading = root.querySelector('main h1');
+    if (!heading) return;
+    const links = document.createElement('div');
+    links.dataset.profileToolLinks = 'true';
+    links.className = 'mt-3 flex flex-wrap gap-2';
+    links.innerHTML = `<button type="button" data-route="documents" class="px-4 py-2 bg-[#ff5c1a] text-white border-2 border-[#111111] font-bold text-sm">${escapeHtml(t('documents'))}</button><button type="button" data-route="tracker" class="px-4 py-2 bg-white dark:bg-[#1a1b1f] border-2 border-[#111111] dark:border-white font-bold text-sm">${escapeHtml(t('tracker'))}</button>`;
+    heading.after(links);
+  };
+
+  const enhanceMobileNavigation = (panel) => {
+    const routeLinks = document.createElement('div');
+    routeLinks.className = 'grid grid-cols-1 gap-2';
+    routeLinks.innerHTML = `<button type="button" data-route="advisor" class="w-full text-left px-3 py-2 font-display font-bold border-2 border-[#111111] dark:border-white bg-white dark:bg-[#1c1d22]">${escapeHtml(t('advisor'))}</button><button type="button" data-route="documents" class="w-full text-left px-3 py-2 font-display font-bold border-2 border-[#111111] dark:border-white bg-white dark:bg-[#1c1d22]">${escapeHtml(t('documents'))}</button><button type="button" data-route="tracker" class="w-full text-left px-3 py-2 font-display font-bold border-2 border-[#111111] dark:border-white bg-white dark:bg-[#1c1d22]">${escapeHtml(t('tracker'))}</button>`;
+    const language = document.createElement('div');
+    language.className = 'py-2';
+    language.innerHTML = languagePickerMarkup();
+    panel.append(routeLinks, language);
+    localizeNavigation();
+    renderLanguagePreference();
+  };
+
+  const updateDocumentReadiness = () => {
+    const cv = root.querySelector('#document-cv')?.files?.[0];
+    const format = root.querySelector('#document-cv')?.dataset.validFormat === 'true';
+    const checks = ['cv-contact', 'cv-education', 'cv-experience', 'cv-skills']
+      .filter((id) => root.querySelector(`#${id}`)?.checked).length;
+    const score = cv && format ? Math.round((1 + checks) / 5 * 100) : 0;
+    const value = root.querySelector('#cv-readiness-value');
+    const meter = root.querySelector('#cv-readiness-meter');
+    if (value) value.textContent = `${score}%`;
+    if (meter) meter.style.width = `${score}%`;
+    const help = root.querySelector('[data-cv-readiness-help]');
+    if (help) help.textContent = !cv ? t('cvChooseFirst') : !format ? t('formatBad') : '';
+  };
+
+  const addDocumentReadinessHelp = () => {
+    const value = root.querySelector('#cv-readiness-value');
+    const paragraph = value?.closest('p');
+    if (!paragraph || root.querySelector('[data-cv-readiness-help]')) return;
+    const help = document.createElement('p');
+    help.dataset.cvReadinessHelp = 'true';
+    help.className = 'mt-1 text-xs text-stone-600 dark:text-stone-300';
+    help.textContent = t('cvChooseFirst');
+    paragraph.after(help);
+  };
+
+  const validateUploadedFile = (input) => {
+    const file = input.files?.[0];
+    const feedback = root.querySelector(`#${CSS.escape(input.id)}-feedback`);
+    if (!file || !feedback) return;
+    const allowedExtensions = input.id === 'document-cv' ? ['pdf', 'docx'] : ['pdf', 'jpg', 'jpeg', 'png'];
+    const extension = (file.name.split('.').pop() || '').toLowerCase();
+    if (file.size > 10 * 1024 * 1024) {
+      input.dataset.validFormat = 'false';
+      feedback.textContent = `${file.name}: ${t('sizeBad')}`;
+      updateDocumentReadiness();
+      return;
+    }
+    if (!allowedExtensions.includes(extension)) {
+      input.dataset.validFormat = 'false';
+      feedback.textContent = `${file.name}: ${t('formatBad')}`;
+      updateDocumentReadiness();
+      return;
+    }
+    file.slice(0, 8).arrayBuffer().then((buffer) => {
+      const bytes = new Uint8Array(buffer);
+      const isPdf = extension === 'pdf' && new TextDecoder().decode(bytes.slice(0, 4)) === '%PDF';
+      const isJpeg = ['jpg', 'jpeg'].includes(extension) && bytes[0] === 0xff && bytes[1] === 0xd8 && bytes[2] === 0xff;
+      const isPng = extension === 'png' && bytes.slice(0, 8).join(',') === '137,80,78,71,13,10,26,10';
+      const isDocx = extension === 'docx' && bytes[0] === 0x50 && bytes[1] === 0x4b && bytes[2] === 0x03 && bytes[3] === 0x04;
+      const valid = isPdf || isJpeg || isPng || isDocx;
+      input.dataset.validFormat = String(valid);
+      feedback.textContent = valid ? `${file.name} — ${t('formatOk')} (${(file.size / 1024 / 1024).toFixed(2)} MB).` : `${file.name}: ${t('formatBad')}`;
+      updateDocumentReadiness();
+    }).catch((error) => {
+      input.dataset.validFormat = 'false';
+      feedback.textContent = t('formatBad');
+      updateDocumentReadiness();
+      console.error('Could not inspect the selected document format.', error);
+    });
+  };
+
+  const addApplicationTracker = () => {
+    if (pageName !== 'detail' || root.querySelector('[data-application-tracker]')) return;
+    const article = root.querySelector('main article[aria-label]');
+    if (!article) return;
+    const statuses = ['notStarted', 'preparing', 'applied', 'interview', 'offered', 'unsuccessful', 'withdrawn'];
+    const saved = readStorage(applicationStorageKey, {});
+    const storedStatus = saved[selectedId];
+    const current = typeof storedStatus === 'string' ? storedStatus : storedStatus?.status || 'notStarted';
+    const section = document.createElement('section');
+    section.dataset.applicationTracker = 'true';
+    section.className = 'my-6 p-5 sm:p-6 bg-white dark:bg-[#1a1b1f] border-2 border-[#111111] dark:border-white';
+    section.innerHTML = `<h2 class="text-xl font-black text-[#111111] dark:text-white">${escapeHtml(t('statusTitle'))}</h2><label for="application-status" class="block mt-3 text-sm font-bold">${escapeHtml(t('status'))}</label><select id="application-status" data-opportunity-status class="mt-1 w-full sm:max-w-md p-3 border-2 border-[#111111] dark:border-white bg-[#faf7f2] dark:bg-[#25262c] text-[#111111] dark:text-white">${statuses.map((status) => `<option value="${status}" ${current === status ? 'selected' : ''}>${escapeHtml(t(status))}</option>`).join('')}</select><p class="mt-2 text-xs text-stone-600 dark:text-stone-300">${escapeHtml(t('statusHint'))}</p><p data-status-confirmation class="mt-2 text-sm font-bold text-emerald-700 dark:text-emerald-300" aria-live="polite"></p><div class="mt-4 flex flex-wrap gap-2"><button type="button" data-route="documents" class="px-4 py-2 bg-[#ff5c1a] text-white border-2 border-[#111111] font-bold text-sm">${escapeHtml(t('documents'))}</button><button type="button" data-route="tracker" class="px-4 py-2 bg-white dark:bg-[#25262c] border-2 border-[#111111] dark:border-white font-bold text-sm">${escapeHtml(t('tracker'))}</button></div>`;
+    article.after(section);
+  };
+
+  const renderAdvisorResults = (form) => {
+    const locationValue = form.querySelector('#advisor-location').value;
+    const educationValue = form.querySelector('#advisor-education').value;
+    const interests = [...form.querySelectorAll('[name="advisor-interest"]:checked')].map((input) => input.value);
+    const resultsNode = root.querySelector('#advisor-results');
+    if (!resultsNode) return;
+    const gradeCanApply = {
+      below10: ['open'], grade10: ['open'], grade11: ['open'],
+      matric: ['open', 'alternative', 'matric'], tvet: ['open', 'alternative'],
+      tertiary: ['open', 'alternative', 'matric', 'tertiary']
+    };
+    const interestTerms = {
+      technology: /tech|digital|cloud|software|data|stem|engineering|renewable|electrical|instrumentation|web development/i,
+      business: /business|enterprise|management|entrepreneur|retail|accelerator/i,
+      finance: /bank|finance|actuarial|bursary|accounting/i,
+      engineering: /engineering|electrical|renewable|instrumentation|stem|technician/i,
+      'creative work': /creative|content|copywriting|design|social commerce|media/i,
+      'customer service': /customer|service|support|experience|banking|retail/i
+    };
+    const matches = opportunities.map((item) => {
+      const eligibleForGrade = gradeCanApply[educationValue]?.includes(item.educationRequirement);
+      const locationMatches = locationValue === 'all' || item.province === 'National' || item.province === locationValue;
+      const searchable = `${item.title} ${item.category} ${item.shortDescription} ${item.fullDescription} ${item.organisation}`;
+      const matchedInterests = interests.filter((interest) => interestTerms[interest]?.test(searchable));
+      const interestMatches = !interests.length || matchedInterests.length > 0;
+      const score = (eligibleForGrade ? 5 : 0) + (item.province === locationValue ? 3 : item.province === 'National' ? 2 : 0) + (matchedInterests.length * 2);
+      return { item, eligibleForGrade, locationMatches, interestMatches, score };
+    }).filter((match) => match.eligibleForGrade && match.locationMatches && match.interestMatches)
+      .sort((a, b) => b.score - a.score || new Date(a.item.closingDate) - new Date(b.item.closingDate))
+      .slice(0, 5);
+    resultsNode.innerHTML = `<h2 class="text-xl font-black text-[#111111] dark:text-white">${escapeHtml(t('recommendations'))}</h2><p class="mt-2 text-xs text-stone-600 dark:text-stone-300">${escapeHtml(t('fitNotice'))}</p>${matches.length ? `<div class="mt-4 grid gap-3">${matches.map(({ item }) => `<article class="p-4 border-2 border-stone-300 dark:border-stone-700 bg-[#faf7f2] dark:bg-[#25262c]"><p class="text-xs font-bold uppercase text-[#ff5c1a]">${escapeHtml(item.category)} · ${escapeHtml(item.province)}</p><h3 class="mt-1 font-bold text-lg">${escapeHtml(item.title)}</h3><p class="mt-1 text-sm">${escapeHtml(item.shortDescription)}</p><p class="mt-2 text-xs font-bold">${escapeHtml(item.educationRequirement)} requirement</p><button type="button" data-route="detail" data-opportunity-id="${escapeHtml(item.id)}" class="mt-3 px-3 py-2 bg-white dark:bg-[#1a1b1f] border-2 border-[#111111] dark:border-white font-bold text-sm">${escapeHtml(t('open'))}</button></article>`).join('')}</div>` : `<p class="mt-4 p-4 bg-stone-100 dark:bg-[#25262c]" role="status">${escapeHtml(t('noMatches'))}</p>`}`;
+  };
 
   const readStorage = (key, fallback) => {
     try {
@@ -88,11 +478,12 @@
       selectedId = detail[1];
       return 'detail';
     }
-    if (['home', 'opportunities', 'resources', 'contact', 'auth'].includes(hash)) return hash;
+    if (['home', 'opportunities', 'resources', 'contact', 'auth', 'advisor', 'documents', 'tracker'].includes(hash)) return hash;
     return 'home';
   };
 
   const templateName = () => {
+    if (pageName === 'advisor' || pageName === 'documents' || pageName === 'tracker') return pageName;
     if (pageName === 'detail') {
       const index = Number((selectedId.match(/\d+$/) || [])[0]);
       return `detail-${String(index || 1).padStart(2, '0')}`;
@@ -684,7 +1075,9 @@
     const panel = wrapper.firstElementChild;
     if (!panel) throw new Error('Mobile navigation markup is empty.');
     panel.dataset.vanillaMobileMenu = 'true';
+    enhanceMobileNavigation(panel);
     header?.append(panel);
+    localizeNavigation();
     button.setAttribute('aria-expanded', 'true');
   };
 
@@ -753,11 +1146,24 @@
 
   const render = async (name = templateName()) => {
     try {
-      const response = await fetch(`./templates/${name}.html`);
-      if (!response.ok) throw new Error(`Could not load page template ${name}: ${response.status}`);
-      let markup = await response.text();
+      let markup;
+      if (name === 'advisor') {
+        markup = advisorMarkup();
+      } else if (name === 'documents') {
+        markup = documentsMarkup();
+      } else if (name === 'tracker') {
+        markup = trackerMarkup();
+      } else {
+        const response = await fetch(`./templates/${name}.html`);
+        if (!response.ok) throw new Error(`Could not load page template ${name}: ${response.status}`);
+        markup = await response.text();
+      }
       if (name === 'auth-profile') markup = profileMarkup(markup, getUser());
       root.innerHTML = markup;
+      if (name === 'documents') {
+        addDocumentReadinessHelp();
+        updateDocumentReadiness();
+      }
       if (name === 'auth-register') {
         const educationSelect = root.querySelector('#reg-education');
         if (educationSelect && ![...educationSelect.options].some((option) => option.value === 'No formal qualification yet')) {
@@ -765,6 +1171,11 @@
         }
       }
       syncTheme();
+      ensureFeatureNavigation();
+      ensureLanguageControl();
+      localizeNavigation();
+      enhanceHomePage();
+      enhanceProfilePage();
       annotateOpportunities();
       updateUserHeader();
       updatePinnedButtons();
@@ -783,6 +1194,7 @@
       if (pageName === 'detail') {
         applyChecklist();
         renderRecentStrip();
+        addApplicationTracker();
       }
       updateCountdownText();
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -838,6 +1250,15 @@
     const dialog = target.closest('[role="dialog"]');
     const button = target.closest('button');
     if (dialog && await handleDialogClick(target, button, dialog)) return;
+    const routeButton = target.closest('button[data-route]');
+    if (routeButton) {
+      const destination = routeButton.dataset.route;
+      const opportunityId = routeButton.dataset.opportunityId || '';
+      root.querySelector('[data-vanilla-mobile-menu]')?.remove();
+      if (destination === 'contact') activeContactMode = 'enquiry';
+      await navigate(destination, opportunityId);
+      return;
+    }
 
     const checklistRow = target.closest('main article .space-y-3 > div.cursor-pointer');
     if (checklistRow) {
@@ -1076,6 +1497,10 @@
     const form = event.target;
     if (!(form instanceof HTMLFormElement)) return;
     event.preventDefault();
+    if (form.id === 'career-advisor-form') {
+      renderAdvisorResults(form);
+      return;
+    }
     if (form.querySelector('#contact-name')) {
       await submitContact(form);
       return;
@@ -1104,12 +1529,39 @@
     } else if (event.target.id === 'search-wall-input') {
       wallFilters.searchQuery = event.target.value;
       applyWallFilters();
+    } else if (event.target.matches('[id^="cv-"]')) {
+      updateDocumentReadiness();
     }
   };
 
   const handleChange = (event) => {
     const target = event.target;
-    if (target.id === 'sort-select') {
+    if (target.matches('[data-language-select]')) {
+      try {
+        localStorage.setItem(languageStorageKey, target.value);
+      } catch (error) {
+        console.error('Could not save the selected language.', error);
+      }
+      render().catch((error) => console.error('Could not apply the selected language.', error));
+    } else if (target.matches('[data-opportunity-status]')) {
+      const statuses = readStorage(applicationStorageKey, {});
+      const opportunityId = target.dataset.opportunityId || selectedId;
+      statuses[opportunityId] = { status: target.value, updatedAt: new Date().toISOString() };
+      if (writeStorage(applicationStorageKey, statuses)) {
+        const notice = target.closest('[data-tracked-item]')?.querySelector('[data-status-confirmation]') ||
+          root.querySelector('[data-application-tracker] [data-status-confirmation]');
+        if (notice) notice.textContent = t('statusSaved');
+      }
+    } else if (target.matches('input[type="file"][id^="document-"]')) {
+      target.dataset.validFormat = 'false';
+      validateUploadedFile(target);
+    } else if (target.matches('input[id$="-stamp"]')) {
+      const fileInput = root.querySelector(`#${CSS.escape(target.id.replace(/-stamp$/, ''))}`);
+      const feedback = fileInput && root.querySelector(`#${CSS.escape(fileInput.id)}-feedback`);
+      if (feedback && target.checked) feedback.textContent = `${feedback.textContent} ${t('stampCheck')}`;
+    } else if (target.matches('input[id^="cv-"]')) {
+      updateDocumentReadiness();
+    } else if (target.id === 'sort-select') {
       wallFilters.sortBy = target.value;
       applyWallFilters();
     } else if (target.id === 'location-filter-select') {
